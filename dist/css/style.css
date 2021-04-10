@@ -34,6 +34,26 @@ input[class^='btn-']:hover {
   background-color: #ffbc00;
 }
 
+.bg-main {
+  background: #ffbc00;
+  color: #fff;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #000;
+}
+
+.bg-medium {
+  background: #ccc;
+  color: #000;
+}
+
 .lead {
   font-size: 1.3rem;
   margin-bottom: 2rem;
@@ -75,6 +95,14 @@ input[class^='btn-']:hover {
   margin: 4rem 0;
 }
 
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: #ffbc00;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
 .section-title {
   font-size: 2rem;
   display: block;
@@ -90,7 +118,7 @@ input[class^='btn-']:hover {
 }
 
 body {
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
   line-height: 1.6;
   background: #fff;
 }
@@ -104,7 +132,9 @@ ul {
   list-style: none;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   text-transform: uppercase;
 }
 
@@ -138,8 +168,8 @@ img {
   color: #fff;
   text-transform: uppercase;
   border-bottom: 3px transparent solid;
-  padding-bottom: .5rem;
-  transition: border-color .5s;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
 }
 
 #main-nav a:hover {
@@ -158,12 +188,18 @@ img {
 
 #header-home .header-content {
   text-align: center;
-  padding-top: 10%;
+  padding-top: 20%;
 }
 
 #header-home .header-content h1 {
   font-size: 4rem;
   line-height: 1.2;
+}
+
+#header-inner {
+  background: url("../img/showcase.jpg") no-repeat 20% 30%/cover;
+  height: 5.5rem;
+  border-bottom: 3px solid #ffbc00;
 }
 
 #home-a .specials {
@@ -175,7 +211,7 @@ img {
 
 #home-a .specials .fas {
   color: #ffbc00;
-  padding: .4rem;
+  padding: 0.4rem;
 }
 
 #home-b .stats {
@@ -206,4 +242,167 @@ img {
 
 #home-b .stats div:nth-child(even) {
   background: #ccc;
+}
+
+#home-c .process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  text-align: center;
+}
+
+#home-c .process-step {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  background: #ffbc00;
+  color: #fff;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  padding: 1rem;
+  transition: all 1s;
+}
+
+#home-c .process-icon {
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  position: relative;
+  transition: all 1s;
+}
+
+#home-c .process-icon:hover {
+  background: #ffbc00;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+}
+
+#home-c .process-icon:hover .process-step {
+  background: #333;
+  color: #fff;
+}
+
+#about-a .about-info {
+  display: grid;
+  grid-template-areas: "bioimg bio bio" "aw1 aw2 aw3";
+  grid-gap: 1.2rem;
+}
+
+#about-a .bio-img {
+  grid-area: bioimg;
+}
+
+#about-a .bio {
+  grid-area: bio;
+  border-left: 3px solid #ffbc00;
+  padding: 0.8rem;
+}
+
+#about-a .award-1 {
+  grid-area: aw1;
+}
+
+#about-a .award-2 {
+  grid-area: aw2;
+}
+
+#about-a .award-3 {
+  grid-area: aw3;
+}
+
+#about-a .award-1 .fas,
+#about-a .award-2 .fas,
+#about-a .award-3 .fas {
+  color: #ffbc00;
+  margin: 1rem;
+}
+
+#about-b .progress {
+  overflow: hidden;
+  height: 20px;
+  background: #ccc;
+  border-radius: 5px;
+  margin-bottom: .75rem;
+}
+
+#about-b .progress div {
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  background: #ffbc00;
+}
+
+#about-c .about-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+#about-c .about-logos img {
+  width: 70%;
+}
+
+#about-d .testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: .5rem;
+}
+
+#about-d .testimonials ul {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+#about-d .testimonials p {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: .5rem;
+}
+
+#about-d .testimonials img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
+#main-footer {
+  background: #333;
+  color: #fff;
+  height: 5rem;
+}
+
+#main-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+}
+
+#main-footer .footer-content .social .fab {
+  margin-right: 1rem;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0.5rem;
+  transition: all 1s;
+}
+
+#main-footer .footer-content .social .fab:hover {
+  background: #ffbc00;
+  transition: all 1s;
 }
